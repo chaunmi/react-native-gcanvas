@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.extensions.sdks.CompileSDK
-    buildToolsVersion rootProject.extensions.sdks.BuildTool
+    compileSdkVersion rootProject.ext.localExtensions.sdks.CompileSDK
+    buildToolsVersion rootProject.ext.localExtensions.sdks.BuildTool
 
     defaultConfig {
-        minSdkVersion rootProject.extensions.sdks.MinSDK
-        targetSdkVersion rootProject.extensions.sdks.TargetSDK
+        minSdkVersion rootProject.ext.localExtensions.sdks.MinSDK
+        targetSdkVersion rootProject.ext.localExtensions.sdks.TargetSDK
         versionCode 1
         versionName "1.0"
 
@@ -73,21 +73,21 @@ dependencies {
     implementation project(':bridges:weex-gcanvas:android:weex_bridge')
 
     compile 'com.loopj.android:android-async-http:1.4.9@aar'
-    compile "com.squareup.picasso:picasso:${rootProject.extensions.sdks.Picasso}"
-    compile "com.facebook.fresco:fresco:${rootProject.extensions.sdks.Fresco}"
-    compile "com.facebook.fresco:animated-gif:${rootProject.extensions.sdks.Fresco}"
+    compile "com.squareup.picasso:picasso:${rootProject.ext.localExtensions.sdks.Picasso}"
+    compile "com.facebook.fresco:fresco:${rootProject.ext.localExtensions.sdks.Fresco}"
+    compile "com.facebook.fresco:animated-gif:${rootProject.ext.localExtensions.sdks.Fresco}"
 
     compile 'com.squareup.okhttp:okhttp:2.3.0'
     compile 'com.squareup.okhttp:okhttp-ws:2.3.0'
     compile 'com.squareup.okio:okio:1.0.1'
-    compile "com.android.support:support-v4:${rootProject.extensions.sdks.Support}"
-    compile "com.android.support:appcompat-v7:${rootProject.extensions.sdks.Support}"
-    compile "com.android.support:design:${rootProject.extensions.sdks.Support}"
-    compile "com.android.support:support-annotations:${rootProject.extensions.sdks.Support}"
+    compile "com.android.support:support-v4:${rootProject.ext.localExtensions.sdks.Support}"
+    compile "com.android.support:appcompat-v7:${rootProject.ext.localExtensions.sdks.Support}"
+    compile "com.android.support:design:${rootProject.ext.localExtensions.sdks.Support}"
+    compile "com.android.support:support-annotations:${rootProject.ext.localExtensions.sdks.Support}"
     compile 'com.jakewharton.scalpel:scalpel:1.1.2'
     compile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
     compile 'com.android.support:multidex:1.0.3'
-    compile "com.taobao.android:weex_sdk:${rootProject.extensions.sdks.Weex}"
+    compile "com.taobao.android:weex_sdk:${rootProject.ext.localExtensions.sdks.Weex}"
 
 
 
